@@ -36,8 +36,4 @@ class TwitterUser < ActiveRecord::Base
   def fetch_tweets
     self.tweets.limit(10)
   end
-
-  def tweet_duration
-    time1 = self.tweets.last.tweeted_at
-  end
 end
